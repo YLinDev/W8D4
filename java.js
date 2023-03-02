@@ -4,6 +4,8 @@ class Clock {
         this.minutes = time.getMinutes()
         this.hours = time.getHours() 
         this.seconds = time.getSeconds() 
+        this.printTime();
+        setInterval(this._tick.bind(this), 1000)
     }
 
     printTime() {
@@ -23,10 +25,10 @@ class Clock {
         if (this.hours > 23) {
             this.hours = 0
         }
-        this.printTime()
+        debugger
+        this.printTime();
     }
 }
 
-a = new Clock();
-a.printTime();
-a._tick();
+new Clock();
+// a._tick();
